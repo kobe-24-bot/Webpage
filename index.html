@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dsports UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+body {
+  background: #e5e9f0;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 60px 60px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  background-color:rgb(36, 33, 33);
+  border-radius:10px;
+  height:10px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #d62828;
+  flex: 0 0 auto;
+  padding-left:20px;
+  padding-top:30px;
+}
+
+/* Center nav links horizontally */
+.navlinks {
+    padding-top:30px;
+  position: relative;;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 35px;
+  justify-content:center;
+  align-items:center;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color:white;
+ 
+}
+
+.navlinks a:hover {
+  color: #c5f005;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  position: relative;
+  min-height: 500px;
+}
+#Welcome{
+    right:20px;
+    top:30px;
+    padding:5px 10px;
+    border-radius:5px;
+    border:none;
+    background-color:#d62828;
+    color:white;
+    font-weight:500;
+}
+select {
+  position: absolute;
+  right: 10px;     /* distance from right */
+  top: 50%;
+  transform: translateY(-50%); /* vertical center */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/premium-photo/sport-isolated-white-background_867452-18657.jpg?w=2000') no-repeat center center;
+  background-size: contain;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-text {
+    background-color: #fbfcf6;
+  width: 30%;
+  height:300px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-text span {
+  color: #d62828;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  color:black;
+  font-weight: 500;
+}
+
+/* STATS */
+.stats {
+  background: linear-gradient(90deg,#111,#222);
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 40px;
+  width: 90%;
+  margin: 40px auto 60px;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  padding-top: 20px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #d62828;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain; /* prevents stretching */
+}
+
+/* NEW SECTIONS */
+.section {
+  margin-top: 80px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #d62828;
+}
+
+/* SPORTS */
+.sport-box {
+  height: 200px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;     /* stack content vertically */
+  justify-content: flex-start; /* move to top */
+  align-items: flex-start;    /* move to left */
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sport-box h3 {
+  margin: 0 0 10px 0; /* top spacing */
+}
+#basketball{
+    border-radius:10px;
+    background:url('https://tse3.mm.bing.net/th/id/OIP.8FawgHMCQMkv_2t7rE0KqwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3')
+    no-repeat center center;
+    background-size:contain;
+   
+    
+}
+#basketball h3{
+    color:red;
+    font-size:larger;
+
+}
+#football{
+    border-radius:10px;
+    background:url('https://tse4.mm.bing.net/th/id/OIP.aRjZ0GT0_MfMAlde1HJ75wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3')
+    no-repeat center center;
+    background-size:contain;
+    filter: brightness(1.5);
+    
+}
+#football h3{
+    color:red;
+    font-size:larger;
+}
+#cricket{
+    border-radius:10px;
+    background:url('https://img.freepik.com/premium-vector/cricket-player-logo-playing-short-concept_898026-1120.jpg?w=2000')
+    no-repeat center center;
+    background-size:contain;
+    filter: brightness(1.5);
+    
+}
+#cricket h3{
+    color:red;
+    font-size:larger;
+}
+
+/* NEWS */
+.news-box {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background:#f79191
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero{ flex-direction: column; padding-bottom: 100px; }
+  .hero-text, .hero-card { width: 100%; text-align: center; margin-bottom: 20px; }
+  .stats{ flex-direction: column; width: 100%; margin: 20px auto 40px; }
+  .stat-box{ border:none; padding:20px 0; }
+  .features{ flex-direction: column; gap:40px; padding-top:10px; }
+  .navlinks{ position: static; transform: none; justify-content: center; margin-top: 15px; gap: 20px; flex-wrap: wrap; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">PLAYGROUND</div>
+    <nav class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#sports">Sports</a>
+    </nav>
+    
+
+<select id="Welcome">
+  <option>Profile </option>
+  <option> Settings</option>
+  <option>About-Us</option>
+</select>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero"id="home">
+    <div class="hero-text">
+      <h1>SPORTS <br> IS <span>SOUL</span></h1>
+      <p>We're passionate about sports. Whether you're a dedicated fan, an aspiring athlete!
+            Champions are made when no one is watching,defined by grit,preparation and refusal to quit.True success stems from believing in yourself,embracing hardwork,and finding joy in the journey-not just the victory.
+      </p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats"id="about">
+    <div class="stat-box">
+      <h2>21K +</h2>
+      <p>Registered athletes are proudly<br> collaborating here.</p>
+    </div>
+    <div class="stat-box">
+      <h2>100 +</h2>
+      <p>Professional coaches <br>are available 
+        to provide the best training.</p>
+    </div>
+    <div class="stat-box">
+      <h2>14 +</h2>
+      <p>We’ve earned over 14+ awards <br>in just six years.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" />
+      </div>
+      <div class="feature-text">
+        <h4>Achievements</h4>
+        <p>Best Sports Service Provider</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" />
+      </div>
+      <div class="feature-text">
+        <h4>Services</h4>
+        <p>We Are Available 24 Hours</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORTS SECTION -->
+  <section id="sports" class="section">
+    <h2>Sports</h2>
+
+    <div class="sport-box"id="basketball">
+      <h3>Basketball</h3>
+      <p>Basketball is a team sport in which two teams of five players each opposing one another 
+on a rectangular court, compete with the primary objective of shooting a basketball through the defender's hoop while preventing the opposing team from shooting through their own hoop. The game is played in four quarters of 10 (international) or 12 minutes (NBA), with a 15-minute halftime break. Basketball is one of the most popular and widely viewed sports in the world, known for its fast pace, high scoring, and exciting plays.
+It was invented in 1891 by Dr. James Naismith, a Canadian physical education instructor, as a way to keep his students active indoors during the winter. The sport has since evolved into a global phenomenon, with professional leagues such as the NBA and international competitions like the FIBA World Cup and the Olympics showcasing the best talent from around the world.
+      </p>
+    </div>
+
+    <div class="sport-box"id="football">
+      <h3>Football</h3>
+      <p>Football is a team sport in which two teams of eleven players each opposing one another compete to score points by advancing the ball into the opposing team's end zone. The game is played on a rectangular field with goalposts at each end. Football is one of the most popular sports in the world, known for its physicality, strategy, and passionate fan base.
+It was invented in the late 19th century in England and has since evolved into various forms, including American football, Canadian football, and rugby. The most popular form of football is American football, which is played primarily in the United States and has a significant following worldwide. The National Football League (NFL) is the premier professional football league in the United States, while international competitions like the FIFA World Cup showcase the best talent from around the world in association football (soccer).
+      </p>
+    </div>
+
+    <div class="sport-box"id="cricket">
+      <h3>Cricket</h3>
+      <p>Cricket is a team sport in which two teams of eleven players each opposing one another compete to score runs by hitting a ball with a bat and running between wickets. The game is played on a rectangular field with a pitch at the center. Cricket is one of the most popular sports in the world, known for its strategic depth, physical demands, and passionate fan base.
+It was invented in England in the 16th century and has since evolved into various forms, including Test cricket, One Day Internationals (ODIs), and Twenty20 (T20) cricket. The most popular form of cricket is Test cricket, which is played over five days, while ODI and T20 formats are shorter and more fast-paced. The International Cricket Council (ICC) is the governing body for cricket worldwide, organizing major tournaments like the ICC Cricket World Cup and the ICC T20 World Cup.It is particularly popular in countries such as India, Australia, England, Pakistan, and South Africa, where it has a significant following and a rich history of competitive play.
+
+      </p>
+    </div>
+  </section>
+
+  <!-- NEWS SECTION -->
+  <section id="news" class="section">
+    <h2>News</h2>
+
+    <div class="news-box">Latest sports news will appear here.</div>
+    <div class="news-box">Match updates and highlights.</div>
+    <div class="news-box">Player transfers and announcements.</div>
+  </section>
+
+</div>
+</body>
+</html>
